@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  currency-rate:
+    container_name: currency-rate
+    build:
+      dockerfile: Dockerfile
+    image: currency-rate:latest
+    ports:
+      - 8080:8080
+    networks:
+      - spring
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+      - ./metrics/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - 9090:9090
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - 3000:3000
+    env_file:
+      - ./metrics/grafana.env
+networks:
+  spring:
