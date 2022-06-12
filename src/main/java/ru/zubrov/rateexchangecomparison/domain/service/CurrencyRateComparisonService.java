@@ -1,10 +1,11 @@
-package ru.zubrov.rateexchangecomparison.service.currency;
+package ru.zubrov.rateexchangecomparison.domain.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import ru.zubrov.rateexchangecomparison.domain.ComparisonResult;
 import ru.zubrov.rateexchangecomparison.domain.CurrencyMark;
 import ru.zubrov.rateexchangecomparison.domain.CurrencyRate;
+import ru.zubrov.rateexchangecomparison.service.currency.CurrencyRateRetrieverService;
 
 @Slf4j
 @Service
