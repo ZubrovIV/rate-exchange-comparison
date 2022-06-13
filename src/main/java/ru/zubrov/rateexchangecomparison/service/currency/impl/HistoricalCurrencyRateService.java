@@ -25,8 +25,8 @@ public class HistoricalCurrencyRateService implements CurrencyRateRetrieverServi
     @Override
     public CurrencyRate retrieveRate(String currencyToCompare) {
         var date = dayMinusOne();
-        var info = rateClient.getHistoricalCurrencyRateInfo(date,appID,baseCurrency,currencyToCompare);
-        log.info("currency for yesterday{}",info);
-        return currencyMapper.map(info,currencyToCompare);
+        var info = rateClient.getHistoricalCurrencyRateInfo(date, appID, baseCurrency, currencyToCompare);
+        log.info("currency for yesterday{}", info);
+        return currencyMapper.map(info, currencyToCompare);
     }
 }

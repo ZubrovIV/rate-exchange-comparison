@@ -14,7 +14,7 @@ public record CurrencyRateComparisonService(CurrencyRateRetrieverService current
     public ComparisonResult compareRates(String currencyToCompare) {
         var historyRate = historical.retrieveRate(currencyToCompare);
         var currentRate = current.retrieveRate(currencyToCompare);
-        return compare(currentRate,historyRate);
+        return compare(currentRate, historyRate);
 
     }
 

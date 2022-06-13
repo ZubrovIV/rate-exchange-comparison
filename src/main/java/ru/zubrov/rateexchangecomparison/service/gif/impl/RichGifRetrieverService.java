@@ -12,7 +12,7 @@ import ru.zubrov.rateexchangecomparison.service.gif.GifRetrieverService;
 @RequiredArgsConstructor
 @Service("MORE")
 public class RichGifRetrieverService implements GifRetrieverService {
-    private  final GifClient gifClient;
+    private final GifClient gifClient;
 
     private final GifClient client;
     @Value("${app.integrations.gif-provider.key}")

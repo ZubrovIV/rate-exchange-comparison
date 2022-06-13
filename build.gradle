@@ -30,6 +30,8 @@ dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.cloud:spring-cloud-starter-loadbalancer'
+	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+
 	//lombok
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
@@ -43,6 +45,9 @@ dependencies {
 	def micrometerVersion = '1.9.0'
 	implementation "io.micrometer:micrometer-registry-prometheus:$micrometerVersion"
 	implementation "io.micrometer:micrometer-core:$micrometerVersion"
+	//validator
+	def validatorVersion = '7.0.4.Final'
+	implementation "org.hibernate:hibernate-validator:$validatorVersion"
 }
 
 dependencyManagement {

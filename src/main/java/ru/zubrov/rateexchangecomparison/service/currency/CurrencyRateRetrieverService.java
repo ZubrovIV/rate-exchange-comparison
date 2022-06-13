@@ -6,4 +6,4 @@ public interface CurrencyRateRetrieverService {
     CurrencyRate retrieveRate(String currencyToCompare);
 
 
-    }
+}

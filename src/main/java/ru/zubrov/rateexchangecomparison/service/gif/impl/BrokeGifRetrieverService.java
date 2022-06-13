@@ -10,22 +10,22 @@ import ru.zubrov.rateexchangecomparison.integration.model.GifInfo;
 import ru.zubrov.rateexchangecomparison.service.gif.GifRetrieverService;
 
 @Slf4j
-@RequiredArgsConstructor
 @Service("LESS")
+@RequiredArgsConstructor
 public class BrokeGifRetrieverService implements GifRetrieverService {
 
     private final GifClient client;
+
     @Value("${app.integrations.gif-provider.key}")
-    private String appID;
+    private String appId;
     @Value("${app.integrations.gif-provider.lessTag}")
     private String tag;
     @Value("${app.integrations.gif-provider.limit}")
     private int limit;
 
-
     @Override
     public GifInfo retrieveGif() {
         log.info("started retrieving a gif with tag {}", tag);
-        return client.getGif(appID, tag, limit);
+        return client.getGif(appId, tag, limit);
     }
 }

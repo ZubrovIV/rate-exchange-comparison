@@ -15,8 +15,8 @@ public class CurrencyMapper {
     public CurrencyRate map(RateInfo rateInfo, String currency) {
         var rates = rateInfo.getRates();
         var valueStr = rates.get(currency);
-        var cost = new BigDecimal(Objects.requireNonNullElse(valueStr,"0"));
-        log.info("currency rate value {}",cost);
+        var cost = new BigDecimal(Objects.requireNonNullElse(valueStr, "0"));
+        log.info("currency rate value {}", cost);
         return new CurrencyRate(cost);
     }
 
