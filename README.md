@@ -14,4 +14,4 @@
 http://localhost:8080/api/comparison/rate/v1/currencies/XPF
 
 Вместо XPF подставить код интересующей вас валюты в формате ISO. 
-Например: EUR 
+Например: EUR
