@@ -3,7 +3,6 @@ package ru.zubrov.rateexchangecomparison.domain.service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import ru.zubrov.rateexchangecomparison.domain.CurrencyRate;
-import ru.zubrov.rateexchangecomparison.integration.RateClient;
 import ru.zubrov.rateexchangecomparison.integration.model.RateInfo;
 
 import java.math.BigDecimal;
